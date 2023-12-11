@@ -4,7 +4,7 @@ import json
 
 app = Flask(__name__)
 
-client = OpenAI(api_key="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")
+client = OpenAI(api_key="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")
 
 messagesList = []
 
