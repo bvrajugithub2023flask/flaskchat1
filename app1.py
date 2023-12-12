@@ -2,9 +2,13 @@ from openai import OpenAI
 from flask import Flask, render_template, request
 import json
 
+import os
+
 app = Flask(__name__)
 
-client = OpenAI(api_key="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")
+# Fetch the GitHub secret from the environment
+my_secret = os.environ.get('RAJU_API_KEY1')
+client = OpenAI(api_key=my_secret)
 
 messagesList = []
 
